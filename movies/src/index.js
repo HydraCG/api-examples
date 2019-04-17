@@ -4,6 +4,8 @@ const app = express();
 const entrypoint = require('./resources/entrypoint.json');
 const context = require('./resources/context.json');
 
+const port = process.env.PORT || 3000;
+
 app.get('/', function (req, res) {
   sendJsonLd(res, entrypoint);
 });
@@ -17,6 +19,6 @@ function sendJsonLd (res, resource) {
   res.send(JSON.stringify(resource));
 }
 
-app.listen(3000, function () {
-  console.log('Example API listening on port 3000!');
+app.listen(port, function () {
+  console.log(`Example API listening on port ${port}!`);
 });

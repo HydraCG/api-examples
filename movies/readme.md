@@ -14,3 +14,7 @@ Features (planned):
 ### Live demo
 
 To explore the API on the web take a look at the [live demo](https://hydra-movies.herokuapp.com/).
+
+### Developer documentation
+
+See `./docs` directory.`
