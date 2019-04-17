@@ -4,6 +4,12 @@ const context = require('./resources/context.json');
 
 const app = express();
 
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Expose-Headers', 'Location, Link');
+  next();
+});
+
 app.get('/', function (req, res) {
   sendJsonLd(res, entrypoint);
 });

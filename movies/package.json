@@ -14,6 +14,8 @@
   "author": "Angelo Veltens <angelo.veltens@online.de> (https://angelo.veltens.org/profile/card#me)",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "jest": "^24.7.1",
+    "supertest": "^4.0.2"
   }
 }
