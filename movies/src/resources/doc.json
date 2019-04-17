@@ -1,0 +1,12 @@
+{
+  "@context": "/context.jsonld",
+  "@id": "/doc",
+  "@type": "hydra:ApiDocumentation",
+  "supportedClass": [
+    {
+      "@id": "schema:Movie",
+      "@type": "hydra:Class",
+      "title": "A movie"
+    }
+  ]
+}
