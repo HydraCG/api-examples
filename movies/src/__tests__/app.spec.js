@@ -13,7 +13,7 @@ describe('app', function () {
     it('sends a correct response status and headers',
         () => response
         .expect(200)
-        .expect('Content-Type', 'application/ld+json; charset=utf-8')
+        .expect('Content-Type', 'application/ld+json')
         .expect('Access-Control-Allow-Origin', '*')
         .expect('Access-Control-Expose-Headers', 'Location, Link')
         .expect('Link', '</doc>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"')
@@ -30,7 +30,7 @@ describe('app', function () {
     it('sends a json-ld response',
         () => response
         .expect(200)
-        .expect('Content-Type', 'application/ld+json; charset=utf-8')
+        .expect('Content-Type', 'application/ld+json')
     );
   });
 });

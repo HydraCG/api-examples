@@ -1,7 +1,5 @@
 const express = require('express');
-const entrypoint = require('./resources/entrypoint.json');
-const context = require('./resources/context.json');
-const doc = require('./resources/doc.json');
+const path = require('path');
 
 const app = express();
 
@@ -12,21 +10,11 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/', function (req, res) {
-  sendJsonLd(res, entrypoint);
-});
-
-app.get('/context.jsonld', function (req, res) {
-  sendJsonLd(res, context);
-});
-
-app.get('/doc', function (req, res) {
-  sendJsonLd(res, doc);
-});
-
-function sendJsonLd (res, resource) {
-  res.header("Content-Type", 'application/ld+json');
-  res.send(JSON.stringify(resource));
-}
+app.use(express.static(path.join(__dirname, '/resources'),
+    {
+      index: 'index.jsonld',
+      extensions: ['jsonld']
+    })
+);
 
 module.exports = app;
