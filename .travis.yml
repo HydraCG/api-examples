@@ -4,3 +4,10 @@ node_js:
 
 before_install:
   - cd movies
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: xAuZ62hQaRsi3/LEJouzTSFAxH4bbbovptpCWDzBUUE1gwAs1NSH/Q2wbbEJr4aELYbz/qq8j50QK3ZjirvpIXvrsXX6FPKvpxoKFbf3qEeu8zG1F+LNRhAVgDVw2o5yyZgQ+KkmM7GswDI4k+RBfhKh/BlHGuvQK1w/CsMvi5NULdom8BuI4fk/VLONR/D4X+QSIZ6Mub692iwKPueGoJ50Ur8I3r1JdW01vqKQlkZ27h/kRR2slQQ6JP2kZv2T5t2KrzlqU1mEB7MgDlJlhUPhyOHQZk9JMXmM8VB3ZqzGVP4U8RgEQosJoWyFEwV+/my2XloL47p72N4gQbM+2lt7QDQ8oas9dxHEe66wqrDuDJyRHMEst4UM4fK1rpAnZDODSsRVA5d9dXpAyRS1wMROrdSXsucmMSHftw/hXoHuUiophHMsPUcaD4QGvmZNxAHOHoeEV5LHcTi19LSsb4gx0xMVfv+ifd5/IAufOikDmgQkueJFq9EzAJ0T5Nw4Mw7v9rLSdw7XiF2YhR4qvOsChyRAyPoNsQzzJP5y3NYjDFsYg2zDsKBC9Q80g9p8hYX/DlyvwkT0OWdFgfmRRdDBYYYCb8Vrg2nEBL8mBkOGuA/8wHl3SZZvgHlmGWJI2+Td7wFWoXQB14nfjbr0/lK0iNZeuaxYkUlMwR19HzQ=
+  app: hydra-movies
+  on: master
