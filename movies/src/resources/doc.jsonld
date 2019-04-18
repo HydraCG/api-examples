@@ -2,6 +2,9 @@
   "@context": "/context.jsonld",
   "@id": "/doc",
   "@type": "hydra:ApiDocumentation",
+  "hydra:title": "Hydra Movies API",
+  "hydra:description": "This API shows how a basic CRUD (Create, Read, Update, Delete) API can be designed using Hydra Core Vocabulary.",
+  "hydra:entrypoint": "/",
   "hydra:supportedClass": [
     {
       "@id": "schema:Movie",
