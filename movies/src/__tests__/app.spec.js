@@ -1,9 +1,9 @@
 const request = require('supertest');
 const app = require('../app');
 
-describe('Given a movies API', function () {
+describe('Given a movies API', () => {
 
-  describe('when the entrypoint is fetched', function () {
+  describe('when the entrypoint is fetched', () => {
 
     let response;
     beforeEach(() => {
@@ -20,7 +20,7 @@ describe('Given a movies API', function () {
     );
   });
 
-  describe('when the API documentation is fetched', function () {
+  describe('when the API documentation is fetched', () => {
 
     let response;
     beforeEach(() => {
