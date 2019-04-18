@@ -1,16 +1,16 @@
 const request = require('supertest');
 const app = require('../app');
 
-describe('app', function () {
+describe('Given a movies API', function () {
 
-  describe('entrypoint', function () {
+  describe('when the entrypoint is fetched', function () {
 
     let response;
     beforeEach(() => {
       response = request(app).get('/');
     });
 
-    it('sends a correct response status and headers',
+    it('then the response contains JSON-LD, allows CORS and links to the API documentation',
         () => response
         .expect(200)
         .expect('Content-Type', 'application/ld+json')
@@ -20,14 +20,14 @@ describe('app', function () {
     );
   });
 
-  describe('api documentation', function () {
+  describe('when the API documentation is fetched', function () {
 
     let response;
     beforeEach(() => {
       response = request(app).get('/doc');
     });
 
-    it('sends a json-ld response',
+    it('then the response contains JSON-LD',
         () => response
         .expect(200)
         .expect('Content-Type', 'application/ld+json')
