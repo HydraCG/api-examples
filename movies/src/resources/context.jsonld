@@ -1,0 +1,6 @@
+{
+  "@context": {
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "schema": "http://schema.org/"
+  }
+}

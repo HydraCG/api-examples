@@ -1,0 +1,21 @@
+{
+  "name": "hydra-movies",
+  "version": "0.0.1",
+  "description": "An example of a Hydra API, that allows to manage movie resources.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "json-ld",
+    "hydra"
+  ],
+  "author": "Angelo Veltens <angelo.veltens@online.de> (https://angelo.veltens.org/profile/card#me)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "jest": "^24.7.1",
+    "supertest": "^4.0.2"
+  }
+}
