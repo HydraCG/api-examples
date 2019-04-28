@@ -6,6 +6,7 @@ services:
   - docker
 
 before_install:
+  - heroku login
   - heroku container:login
   - cd movies
 
