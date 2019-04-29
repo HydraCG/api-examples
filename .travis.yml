@@ -2,12 +2,17 @@ language: node_js
 node_js:
   - "11"
 
+services:
+  - docker
+
 before_install:
+  - heroku container:login
   - cd movies
 
 deploy:
-  provider: heroku
-  api_key:
-    secure: xAuZ62hQaRsi3/LEJouzTSFAxH4bbbovptpCWDzBUUE1gwAs1NSH/Q2wbbEJr4aELYbz/qq8j50QK3ZjirvpIXvrsXX6FPKvpxoKFbf3qEeu8zG1F+LNRhAVgDVw2o5yyZgQ+KkmM7GswDI4k+RBfhKh/BlHGuvQK1w/CsMvi5NULdom8BuI4fk/VLONR/D4X+QSIZ6Mub692iwKPueGoJ50Ur8I3r1JdW01vqKQlkZ27h/kRR2slQQ6JP2kZv2T5t2KrzlqU1mEB7MgDlJlhUPhyOHQZk9JMXmM8VB3ZqzGVP4U8RgEQosJoWyFEwV+/my2XloL47p72N4gQbM+2lt7QDQ8oas9dxHEe66wqrDuDJyRHMEst4UM4fK1rpAnZDODSsRVA5d9dXpAyRS1wMROrdSXsucmMSHftw/hXoHuUiophHMsPUcaD4QGvmZNxAHOHoeEV5LHcTi19LSsb4gx0xMVfv+ifd5/IAufOikDmgQkueJFq9EzAJ0T5Nw4Mw7v9rLSdw7XiF2YhR4qvOsChyRAyPoNsQzzJP5y3NYjDFsYg2zDsKBC9Q80g9p8hYX/DlyvwkT0OWdFgfmRRdDBYYYCb8Vrg2nEBL8mBkOGuA/8wHl3SZZvgHlmGWJI2+Td7wFWoXQB14nfjbr0/lK0iNZeuaxYkUlMwR19HzQ=
-  app: hydra-movies
-  on: master
+  provider: script
+  script: heroku container:push web -a hydra-movies; heroku container:release web -a hydra-movies
+
+env:
+  global:
+    secure: RnC8voz/UmT81NQS6aNPpkGumTTdEnzxX11ulLs9/P+8i2QBpf0n4Bn26fMy6YKSVUfNtolqOamged4s/ljeoNkU/55i6y639wMntoSP/4na8KdATxg9a/Qef2fO75eZXSmJm7/o3Ua0tmoqHWoGa1qefQr6Ygubt8pXUo6rV7qq08TDGA8EXQCxAajNlX8V3Jg+FN9Cljqre1z3XRAkINEHQtdfhkaLDUWqFPSaNezRcl5sl2FSGucg0JrNVBG8i5QCsbQ3lnY7HNC0Sfr8SQFPHy080OlrUvcEOJyT5yLQ2OcSF2S9WRQ4ECGRvYHuqBxbwZ80+XW+egZo2dNKyxBnbyhVuqxRUXd2u1uyPu9J7DIIJnT/IjY7XCjmwLiOk+XE+ielBZ5OfGSu16qWb1jGfopWg8RzVQpvasGrG6IpndFZ/dgysvzppqyRXled6tSnlp67T6vnYiuzymUcso0c9Km7UABQPEI1BMTqMMM5I5wuGoZEOYAXbUyWKZccdNSVHpf/ZW00Racxh47H0jIud91E0GXjf85AgS0bPG2fBpyLxe4XMLQBNh2m8YX2RA4GveHSQYNvWbSrJxCUGlFcsqLwVTAu0kTd8tMHI+s7ndQRelLMlUpA2JjPoY7pxqfdnvTAE4tnUxlMVndk+JgcpeBPkItJQGS0eiRKKfk=
