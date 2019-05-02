@@ -1,6 +1,16 @@
 {
   "@context": {
+    "mov": "https://hydra-movies.herokuapp.com/doc#",
     "hydra": "http://www.w3.org/ns/hydra/core#",
+    "hydra:expects": {
+      "@type": "@vocab"
+    },
+    "hydra:returns": {
+      "@type": "@vocab"
+    },
+    "hydra:property": {
+      "@type": "@vocab"
+    },
     "schema": "http://schema.org/"
   }
 }

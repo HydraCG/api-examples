@@ -7,9 +7,47 @@
   "hydra:entrypoint": "/",
   "hydra:supportedClass": [
     {
+      "@id": "schema:EntryPoint",
+      "@type": "hydra:Class",
+      "hydra:title": "API entrypoint",
+      "hydra:supportedProperty": [
+        {
+          "hydra:property": "hydra:collection",
+          "hydra:title": "Collections",
+          "hydra:description": "Collections provided by this API"
+        }
+      ]
+    },
+    {
+      "@id": "mov:MovieCollection",
+      "@type": "hydra:Class",
+      "hydra:title": "All movies",
+      "hydra:supportedOperation": {
+        "@id": "mov:create-movie",
+        "@type": "schema:CreateAction",
+        "hydra:title": "Create a new movie",
+        "hydra:method": "POST",
+        "hydra:expects": "schema:Movie",
+        "hydra:returns": "schema:Movie",
+        "hydra:statusCodes": [
+          {
+            "hydra:code": 201,
+            "hydra:description": "If the movie was created successfully."
+          }
+        ]
+      }
+    },
+    {
       "@id": "schema:Movie",
       "@type": "hydra:Class",
-      "hydra:title": "A movie"
+      "hydra:title": "Movie",
+      "hydra:supportedProperty": [
+        {
+          "hydra:property": "schema:name",
+          "hydra:title": "name",
+          "hydra:description": "The movie's name"
+        }
+      ]
     }
   ]
 }
