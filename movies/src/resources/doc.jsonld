@@ -10,6 +10,7 @@
       "@id": "schema:EntryPoint",
       "@type": "hydra:Class",
       "hydra:title": "API entrypoint",
+      "hydra:description": "Every capability of the API can be reached from here by following links.",
       "hydra:supportedProperty": [
         {
           "hydra:property": "hydra:collection",
@@ -22,10 +23,12 @@
       "@id": "mov:MovieCollection",
       "@type": "hydra:Class",
       "hydra:title": "All movies",
+      "hydra:description": "This collection contains all movies that are available via the API.",
       "hydra:supportedOperation": {
         "@id": "mov:create-movie",
         "@type": "schema:CreateAction",
-        "hydra:title": "Create a new movie",
+        "hydra:title": "Create movie",
+        "hydra:description": "Creates a new movie",
         "hydra:method": "POST",
         "hydra:expects": "schema:Movie",
         "hydra:returns": "schema:Movie",
@@ -41,6 +44,7 @@
       "@id": "schema:Movie",
       "@type": "hydra:Class",
       "hydra:title": "Movie",
+      "hydra:description": "A single movie",
       "hydra:supportedProperty": [
         {
           "hydra:property": "schema:name",
