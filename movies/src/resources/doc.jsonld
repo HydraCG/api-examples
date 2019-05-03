@@ -19,7 +19,7 @@
       "hydra:description": "This collection contains all movies that are available via the API.",
       "hydra:supportedOperation": {
         "@id": "mov:create-movie",
-        "@type": "schema:CreateAction",
+        "@type": [ "hydra:Operation", "schema:CreateAction" ],
         "hydra:title": "Create movie",
         "hydra:description": "Creates a new movie",
         "hydra:method": "POST",
