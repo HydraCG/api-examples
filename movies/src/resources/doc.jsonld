@@ -43,6 +43,16 @@
           "property": "schema:name",
           "title": "name",
           "description": "The movie's name"
+        },
+        {
+          "property": "schema:description",
+          "title": "description",
+          "description": "Textual description of the movie."
+        },
+        {
+          "property": "schema:duration",
+          "title": "duration",
+          "description": "The movie's duration in ISO 8601 date format."
         }
       ]
     }
