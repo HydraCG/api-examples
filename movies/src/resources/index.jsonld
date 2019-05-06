@@ -6,7 +6,7 @@
     "@id": "movies",
     "@type": [
       "hydra:Collection",
-      "mov:MovieCollection"
+      "mov:Movies"
     ]
   }
 }

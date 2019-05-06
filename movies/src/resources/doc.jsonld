@@ -13,10 +13,10 @@
       "hydra:description": "Every capability of the API can be reached from here by following links."
     },
     {
-      "@id": "mov:MovieCollection",
+      "@id": "mov:Movies",
       "@type": "hydra:Class",
-      "hydra:title": "All movies",
-      "hydra:description": "This collection contains all movies that are available via the API.",
+      "hydra:title": "Movies",
+      "hydra:description": "Allows to access and manage movies that are available via the API.",
       "hydra:supportedOperation": {
         "@id": "mov:create-movie",
         "@type": [ "hydra:Operation", "schema:CreateAction" ],
