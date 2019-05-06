@@ -1,48 +1,48 @@
 {
   "@context": "/context.jsonld",
   "@id": "/doc",
-  "@type": "hydra:ApiDocumentation",
-  "hydra:title": "Hydra Movies API",
-  "hydra:description": "This API shows how a basic CRUD (Create, Read, Update, Delete) API can be designed using Hydra Core Vocabulary.",
-  "hydra:entrypoint": "/",
-  "hydra:supportedClass": [
+  "@type": "ApiDocumentation",
+  "title": "Hydra Movies API",
+  "description": "This API shows how a basic CRUD (Create, Read, Update, Delete) API can be designed using Hydra Core Vocabulary.",
+  "entrypoint": "/",
+  "supportedClass": [
     {
       "@id": "schema:EntryPoint",
-      "@type": "hydra:Class",
-      "hydra:title": "API entrypoint",
-      "hydra:description": "Every capability of the API can be reached from here by following links."
+      "@type": "Class",
+      "title": "API entrypoint",
+      "description": "Every capability of the API can be reached from here by following links."
     },
     {
       "@id": "mov:Movies",
-      "@type": "hydra:Class",
-      "hydra:title": "Movies",
-      "hydra:description": "Allows to access and manage movies that are available via the API.",
-      "hydra:supportedOperation": {
+      "@type": "Class",
+      "title": "Movies",
+      "description": "Allows to access and manage movies that are available via the API.",
+      "supportedOperation": {
         "@id": "mov:create-movie",
-        "@type": [ "hydra:Operation", "schema:CreateAction" ],
-        "hydra:title": "Create movie",
-        "hydra:description": "Creates a new movie",
-        "hydra:method": "POST",
-        "hydra:expects": "schema:Movie",
-        "hydra:returns": "schema:Movie",
-        "hydra:statusCodes": [
+        "@type": [ "Operation", "schema:CreateAction" ],
+        "title": "Create movie",
+        "description": "Creates a new movie",
+        "method": "POST",
+        "expects": "schema:Movie",
+        "returns": "schema:Movie",
+        "possibleStatus": [
           {
-            "hydra:code": 201,
-            "hydra:description": "If the movie was created successfully."
+            "statusCode": 201,
+            "description": "If the movie was created successfully."
           }
         ]
       }
     },
     {
       "@id": "schema:Movie",
-      "@type": "hydra:Class",
-      "hydra:title": "Movie",
-      "hydra:description": "A single movie",
-      "hydra:supportedProperty": [
+      "@type": "Class",
+      "title": "Movie",
+      "description": "A single movie",
+      "supportedProperty": [
         {
-          "hydra:property": "schema:name",
-          "hydra:title": "name",
-          "hydra:description": "The movie's name"
+          "property": "schema:name",
+          "title": "name",
+          "description": "The movie's name"
         }
       ]
     }

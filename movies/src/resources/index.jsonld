@@ -2,10 +2,10 @@
   "@context": "/context.jsonld",
   "@id": "/",
   "@type": "schema:EntryPoint",
-  "hydra:collection": {
+  "collection": {
     "@id": "movies",
     "@type": [
-      "hydra:Collection",
+      "Collection",
       "mov:Movies"
     ]
   }
