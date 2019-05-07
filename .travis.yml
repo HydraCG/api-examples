@@ -11,8 +11,6 @@ before_install:
 deploy:
   provider: script
   script: heroku container:login; heroku container:push web -a hydra-movies; heroku container:release web -a hydra-movies
-  on:
-    all_branches: true
 
 env:
   global:
