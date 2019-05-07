@@ -1,6 +1,9 @@
 {
-  "@context": {
-    "hydra": "http://www.w3.org/ns/hydra/core#",
-    "schema": "http://schema.org/"
-  }
+  "@context": [
+    "https://www.w3.org/ns/hydra/core",
+    {
+      "mov": "https://hydra-movies.herokuapp.com/doc#",
+      "schema": "http://schema.org/"
+    }
+  ]
 }

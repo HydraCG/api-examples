@@ -1,5 +1,12 @@
 {
   "@context": "/context.jsonld",
   "@id": "/",
-  "@type": "hydra:Entrypoint"
+  "@type": "schema:EntryPoint",
+  "collection": {
+    "@id": "movies",
+    "@type": [
+      "Collection",
+      "mov:Movies"
+    ]
+  }
 }

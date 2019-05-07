@@ -12,3 +12,18 @@ Afterwards run the follwing command within the `movies` directory:
 ```bash
 make deploy
 ```
+
+### Deploy to your own account
+
+You can deploy to your own heroku account. First log in:
+ 
+ ```bash
+ heroku login
+ heroku container:login
+ ```
+ 
+Then run `make` with specifying the `APP` name:
+
+```bash
+make APP=my-hydra-movies deploy
+```
