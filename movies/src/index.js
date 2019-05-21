@@ -11,7 +11,7 @@ app.post('/movies', (req, res) => {
   res.setHeader('Location', '/movies/d517cae6-6cdc-11e9-a923-1681be663d3e');
   res.setHeader('Content-Type', 'application/ld+json');
   res.send({
-    "@context": "/context.jsonld",
+    "@context": "https://hydra-movies.herokuapp.com/context.jsonld",
     "@id": "/movies/d517cae6-6cdc-11e9-a923-1681be663d3e",
     "@type": "schema:Movie",
     "schema:name": "Fake Movie"

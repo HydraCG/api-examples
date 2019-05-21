@@ -1,5 +1,5 @@
 {
-  "@context": "/context.jsonld",
+  "@context": "https://hydra-movies.herokuapp.com/context.jsonld",
   "@id": "/",
   "@type": "schema:EntryPoint",
   "collection": {
