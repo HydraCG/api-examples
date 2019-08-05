@@ -18,3 +18,15 @@ To explore the API on the web take a look at the [live demo](https://hydra-movie
 ### Developer documentation
 
 See `./docs` directory.`
+
+### Running tests
+
+1. Start the local server
+
+        npm start
+
+2. Run hydra analyser and [hypertest](http://testing.hypermedia.app)
+
+         npm test
+
+Hypertest 
