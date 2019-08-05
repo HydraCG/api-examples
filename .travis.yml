@@ -9,7 +9,7 @@ before_install:
   - cd movies
   
 before_script:
-  - npm start &; $SERVER_PID=$!
+  - npm start & SERVER_PID=$!
   
 after_script:
   - kill $SERVER_PID
