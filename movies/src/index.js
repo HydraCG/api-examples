@@ -14,6 +14,10 @@ app.post('/movies', (req, res) => {
     "@context": "/context.jsonld",
     "@id": "/movies/d517cae6-6cdc-11e9-a923-1681be663d3e",
     "@type": "schema:Movie",
-    "schema:name": "Fake Movie"
+    "schema:name": "Fake Movie",
+    "schema:duration": {
+      "@value": "PT115M",
+      "@type": "schema:Duration"
+    }
   });
 });
