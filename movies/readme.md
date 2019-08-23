@@ -27,6 +27,11 @@ See `./docs` directory.`
 
 2. Run hydra analyser and [hypertest](http://testing.hypermedia.app)
 
-         npm test
+        npm test
 
-Hypertest 
+The `test:analyse` script performs a static analysis of the API Documentation using [hydra-validator-analyse](https://www.npmjs.com/package/hydra-validator-analyse).
+
+The script `test:e2e` runs the scenarios defined in `src/tests/*.hydra`. These scenarios
+are written in hydra flavour of [Hypertest DSL](https://testing.hypermedia.app/dsl/).
+
+Additionally, jest script is included to run tests not (yet) possible in Hypertest.
