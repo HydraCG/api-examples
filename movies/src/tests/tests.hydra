@@ -14,7 +14,7 @@ With Class schema:EntryPoint {
 }
 
 With Class mov:Movies {
-    Expect Operation <https://hydra-movies.herokuapp.com/doc#create-movie> {
+    Expect Operation mov:create-movie {
         Invoke {
             Content-Type "text/turtle"
 
