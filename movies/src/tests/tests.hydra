@@ -8,9 +8,9 @@ With Class schema:EntryPoint {
         Expect Type mov:Movies
     }
 
-    Expect Link hydra:collection {
+    Expect Link hydra:collection /*{
         Expect Status 200
-    }
+    }*/
 }
 
 With Class mov:Movies {
