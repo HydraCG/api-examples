@@ -6,7 +6,15 @@ services:
   - docker
 
 before_install:
+  - npm install -g wait-on
   - cd movies
+  
+before_script:
+  - npm start & SERVER_PID=$!
+  - wait-on --timeout 30000 http://localhost:3000
+  
+after_script:
+  - kill $SERVER_PID
 
 deploy:
   provider: script
